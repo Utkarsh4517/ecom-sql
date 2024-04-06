@@ -1,4 +1,4 @@
-import { dataBaseConfiguration } from "../config/dbConfig";
+import { dataBaseConfiguration } from "../config/dbConfig.js";
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize(
@@ -6,14 +6,14 @@ const sequelize = new Sequelize(
   dataBaseConfiguration.user,
   dataBaseConfiguration.password,
   {
-    host: dataBaseConfigeration.host,
-    dialect: dataBaseConfigeration.dialect,
-    port: dataBaseConfigeration.port,
+    host: dataBaseConfiguration.host,
+    dialect: dataBaseConfiguration.dialect,
+    port: dataBaseConfiguration.port,
     pool: {
-      max: dataBaseConfigeration.pool.max,
-      min: dataBaseConfigeration.pool.min,
-      acquire: dataBaseConfigeration.pool.acquire,
-      idle: dataBaseConfigeration.pool.idle,
+      max: dataBaseConfiguration.pool.max,
+      min: dataBaseConfiguration.pool.min,
+      acquire: dataBaseConfiguration.pool.acquire,
+      idle: dataBaseConfiguration.pool.idle,
     },
   }
 );
